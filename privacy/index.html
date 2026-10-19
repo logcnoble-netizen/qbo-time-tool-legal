@@ -45,7 +45,7 @@
     <article class="doc" id="privacy" aria-labelledby="privacy-title">
       <p class="eyebrow">Legal</p>
       <h1 id="privacy-title">Privacy Policy</h1>
-      <p class="meta"><span><b>Effective:</b> October 15, 2026</span><span><b>Applies to:</b> QBO Time Tool for Windows</span></p>
+      <p class="meta"><span><b>Effective:</b> October 15, 2026</span><span><b>Last updated:</b> October 19, 2026</span><span><b>Applies to:</b> QBO Time Tool for Windows</span></p>
 
       <section class="summary" aria-label="Summary">
         <h2>In short</h2>
@@ -75,6 +75,7 @@
             <tr><td>Related names</td><td>Company name; names of employees, vendors, customers and service items</td><td>Your QuickBooks company, to show and match entries</td></tr>
             <tr><td>Files you choose</td><td>Spreadsheets (CSV) or backup files you upload</td><td>Your computer</td></tr>
             <tr><td>Backups and logs</td><td>Copies of entries before deletion; results of each delete or upload</td><td>Created by the app on your computer</td></tr>
+            <tr><td>Request log</td><td>Time, type and result of each QuickBooks request and Intuit's reference ID (intuit_tid), with no record contents; kept 3 months</td><td>Created by the app on your computer</td></tr>
           </tbody>
         </table>
       </div>
@@ -108,9 +109,10 @@
 
       <h2 id="privacy-6"><span class="n">6.</span>Security</h2>
       <p>All communication with Intuit uses encrypted HTTPS connections. Access tokens expire after about an hour and are
-        refreshed automatically. Stored files are protected by your Windows account's file permissions, but the app does
-        not add its own encryption to them. Protect them by using a Windows account password, keeping your computer
-        updated and using full-disk encryption (such as BitLocker). Only install the app on computers you trust. No method
+        refreshed automatically. The saved QuickBooks connection and your Intuit client secrets are encrypted with Windows' Data Protection API,
+        so only your Windows account on that computer can read them, and access tokens are kept in memory only, never
+        written to disk. Backups and logs are protected by your Windows account's file permissions. Protect them by using
+        a Windows account password, keeping your computer updated and using full-disk encryption (such as BitLocker). Only install the app on computers you trust. No method
         of storage or transmission is completely secure, and we cannot guarantee absolute security.</p>
 
       <h2 id="privacy-7"><span class="n">7.</span>Sharing and sale</h2>
