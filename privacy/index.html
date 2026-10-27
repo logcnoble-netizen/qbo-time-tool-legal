@@ -45,15 +45,27 @@
     <article class="doc" id="privacy" aria-labelledby="privacy-title">
       <p class="eyebrow">Legal</p>
       <h1 id="privacy-title">Privacy Policy</h1>
-      <p class="meta"><span><b>Effective:</b> October 15, 2026</span><span><b>Last updated:</b> October 19, 2026</span><span><b>Applies to:</b> QBO Time Tool for Windows</span></p>
+      <p class="meta"><span><b>Effective:</b> October 27, 2026</span><span><b>Last updated:</b> October 27, 2026</span><span><b>Applies to:</b> QBO Time Tool for Windows and macOS</span></p>
+
+      <section class="summary" aria-label="What changed">
+        <h2>What changed on October 27, 2026</h2>
+        <ul>
+          <li>New: <b>Sign in with Intuit</b>. When you sign in this way, a small sign-in service we operate briefly handles
+            your connection tokens. It never receives your QuickBooks data. See <a href="#privacy-4">section 4</a>.</li>
+          <li>Disconnect in the app now also ends the connection at Intuit.</li>
+          <li>The policy now covers the Mac version and the other QuickBooks records the app works with.</li>
+        </ul>
+      </section>
 
       <section class="summary" aria-label="Summary">
         <h2>In short</h2>
         <ul>
-          <li>QBO Time Tool runs on your computer. We don't operate servers that receive your QuickBooks data.</li>
+          <li>QBO Time Tool runs on your computer. We don't operate servers that receive your QuickBooks data. When you use
+            Sign in with Intuit, a small sign-in service we operate briefly handles your connection tokens (see section 4);
+            it never receives your QuickBooks data.</li>
           <li>Your QuickBooks data goes only between your computer and Intuit, over encrypted connections.</li>
           <li>The app has no analytics, advertising or tracking, and we never sell or share your information.</li>
-          <li>Everything the app stores stays in your Windows user folder, and you can delete it at any time.</li>
+          <li>Everything the app stores stays in your user folder on your computer, and you can delete it at any time.</li>
         </ul>
       </section>
 
@@ -69,12 +81,12 @@
         <table>
           <thead><tr><th scope="col">Information</th><th scope="col">Examples</th><th scope="col">Source</th></tr></thead>
           <tbody>
-            <tr><td>Intuit app credentials</td><td>Client ID and Client Secret for your Intuit developer app</td><td>You enter them in Settings</td></tr>
-            <tr><td>Connection details</td><td>OAuth access and refresh tokens, QuickBooks company ID (realm ID)</td><td>Intuit, after you sign in and approve access</td></tr>
-            <tr><td>QuickBooks time data</td><td>Time entry dates, hours, rates, descriptions, billable status</td><td>Your QuickBooks company, when you load entries</td></tr>
-            <tr><td>Related names</td><td>Company name; names of employees, vendors, customers and service items</td><td>Your QuickBooks company, to show and match entries</td></tr>
-            <tr><td>Files you choose</td><td>Spreadsheets (CSV) or backup files you upload</td><td>Your computer</td></tr>
-            <tr><td>Backups and logs</td><td>Copies of entries before deletion; results of each delete or upload</td><td>Created by the app on your computer</td></tr>
+            <tr><td>Intuit app credentials</td><td>Client ID and Client Secret for your Intuit developer app</td><td>Only if you choose Use my own Intuit app keys in Settings; with Sign in with Intuit you don't enter any</td></tr>
+            <tr><td>Connection details</td><td>OAuth access and refresh tokens, QuickBooks company ID (realm ID)</td><td>Intuit, after you sign in and approve access (with Sign in with Intuit, passed to the app through our sign-in service)</td></tr>
+            <tr><td>QuickBooks records</td><td>Time entries; invoices, bills, journal entries, expenses, purchase orders, estimates, deposits and payments; customers, vendors, employees, products and services, and accounts</td><td>Your QuickBooks company, when you load, scan, change or upload records</td></tr>
+            <tr><td>Files you choose</td><td>Spreadsheets (CSV) or backup files you upload, and lists you paste in (for example, copied from Excel)</td><td>Your computer</td></tr>
+            <tr><td>Backups and logs</td><td>Copies of records before they are changed or deleted; results of each run, used for undo and the change log</td><td>Created by the app on your computer</td></tr>
+            <tr><td>Saved work</td><td>Upload column mappings and names you matched by hand; the last health scan; change logs you export</td><td>Created by the app on your computer</td></tr>
             <tr><td>Request log</td><td>Time, type and result of each QuickBooks request and Intuit's reference ID (intuit_tid), with no record contents; kept 3 months</td><td>Created by the app on your computer</td></tr>
           </tbody>
         </table>
@@ -84,23 +96,39 @@
 
       <h2 id="privacy-3"><span class="n">3.</span>How it is used</h2>
       <p>The app uses this information only to connect to your QuickBooks company and do what you direct: loading,
-        filtering and reviewing time entries, deleting the entries you confirm, creating the entries you upload, and
-        saving backups and result logs. It is not used for advertising, profiling or any other purpose.</p>
+        filtering, scanning and reviewing records, changing or deleting the records you confirm, creating the records you
+        upload, undoing earlier runs, and saving backups, result logs and the reports you export. It is not used for
+        advertising, profiling or any other purpose.</p>
 
       <h2 id="privacy-4"><span class="n">4.</span>Where it goes</h2>
       <p>The app sends requests directly from your computer to Intuit over HTTPS, including Intuit's sign-in pages
         (<code>appcenter.intuit.com</code>), its token service (<code>oauth.platform.intuit.com</code>) and the QuickBooks
         Online API (<code>quickbooks.api.intuit.com</code>, or the sandbox equivalent). Inside your computer, the app's
         window talks to its own built-in service, which only accepts connections from that same computer.</p>
-      <p>No information is sent to us or to any other third party. If you email us, we receive whatever you choose to
+      <p><b>Sign in with Intuit.</b> When you sign in this way, your browser goes through our sign-in service
+        (<code>qbo-time-tool-broker.timetool.workers.dev</code>) to Intuit's sign-in pages. After you approve access,
+        Intuit sends a one-time sign-in code to the service. The service exchanges it for your connection tokens using our
+        Intuit app's credentials, holds them for at most 5 minutes until the app collects them, and then deletes them.
+        When the access token is renewed (about every hour) and when you disconnect, the app sends the refresh token to the
+        service, which passes it to Intuit and returns the result without storing it. The service never receives your
+        QuickBooks data, and it doesn't log tokens, codes or the contents of requests. It runs on Cloudflare (Cloudflare,
+        Inc.), which processes these connections for us. If you choose Use my own Intuit app keys, the app talks to Intuit
+        directly and the sign-in service isn't used.</p>
+      <p>Apart from the connection tokens our sign-in service passes through, as described above, no information is sent
+        to us or to any other third party. If you email us, we receive whatever you choose to
         include in your message and use it only to reply.</p>
 
       <h2 id="privacy-5"><span class="n">5.</span>Storage and retention</h2>
-      <p>The app stores your settings, connection details, backups and logs in your Windows user profile, at
-        <code>%APPDATA%\QBO Time Tool</code>. You can open this folder from the app (File → Open data folder). The data
+      <p>The app stores your settings, connection details, backups and logs in your user profile, at
+        <code>%APPDATA%\QBO Time Tool</code> on Windows or <code>~/Library/Application Support/QBO Time Tool</code> on a
+        Mac. You can open this folder from the app (File → Open data folder). The data
         stays there until you delete it:</p>
       <ul>
-        <li><b>Disconnect</b> in the app removes the saved connection tokens for the current company.</li>
+        <li><b>Disconnect</b> in the app removes the saved connection tokens for the current company and ends the
+          connection at Intuit.</li>
+        <li><b>Our sign-in service</b> keeps a sign-in for at most 10 minutes and the tokens from it for at most 5
+          minutes, and keeps nothing once the app has collected them. Renewals and disconnects pass through without being
+          stored.</li>
         <li><b>Deleting the folder</b> removes all settings, tokens, backups and logs.</li>
         <li><b>Uninstalling</b> the app leaves this folder in place, so backups are not lost by accident. Delete it
           yourself if you no longer need it.</li>
@@ -109,16 +137,21 @@
 
       <h2 id="privacy-6"><span class="n">6.</span>Security</h2>
       <p>All communication with Intuit uses encrypted HTTPS connections. Access tokens expire after about an hour and are
-        refreshed automatically. The saved QuickBooks connection and your Intuit client secrets are encrypted with Windows' Data Protection API,
-        so only your Windows account on that computer can read them, and access tokens are kept in memory only, never
-        written to disk. Backups and logs are protected by your Windows account's file permissions. Protect them by using
-        a Windows account password, keeping your computer updated and using full-disk encryption (such as BitLocker). Only install the app on computers you trust. No method
+        refreshed automatically. With Sign in with Intuit, our Intuit app's client secret is held in Cloudflare's encrypted
+        secret store, and your computer never receives it. The sign-in link in your browser carries only a one-way
+        fingerprint of a secret the app keeps, so no one else can collect your sign-in. The saved QuickBooks connection and
+        any Intuit client secrets you enter are encrypted using your operating system's protection (Windows' data
+        protection, or the Keychain on a Mac), so only your user account on that computer can read them, and access tokens
+        are kept in memory only, never written to disk. Backups and logs are protected by your user account's file
+        permissions. Protect them by using an account password, keeping your computer updated and using full-disk
+        encryption (such as BitLocker on Windows or FileVault on a Mac). Only install the app on computers you trust. No method
         of storage or transmission is completely secure, and we cannot guarantee absolute security.</p>
 
       <h2 id="privacy-7"><span class="n">7.</span>Sharing and sale</h2>
       <p>We do not sell, rent, share or disclose your information to anyone, and we do not use it for targeted
-        advertising. Because the app does not send your data to us, we do not hold your QuickBooks data or credentials and
-        cannot disclose them.</p>
+        advertising. We do not hold your QuickBooks data. Our sign-in service handles your connection tokens only briefly,
+        as described in section 4, and does not keep them, so we cannot disclose them. We use Cloudflare, Inc. to host the
+        sign-in service; it processes the connections for us under its own security and privacy terms.</p>
 
       <h2 id="privacy-8"><span class="n">8.</span>Cookies and tracking</h2>
       <p>The app does not use analytics, tracking pixels, advertising identifiers or crash reporting. Its built-in browser
@@ -131,17 +164,17 @@
       <ul>
         <li><b>Revoke access.</b> You can disconnect the app in QuickBooks Online from the apps you've connected to your
           company, and Disconnect it in the app. After that, the app can no longer reach your company.</li>
-        <li><b>Delete local data.</b> Delete <code>%APPDATA%\QBO Time Tool</code> at any time.</li>
+        <li><b>Delete local data.</b> Delete the data folder (section 5) at any time.</li>
         <li><b>Privacy laws.</b> Depending on where you live (for example, under the Colorado Privacy Act, the California
           Consumer Privacy Act or the GDPR), you may have rights to access, correct, delete or move personal data, and to
           opt out of its sale or use for targeted advertising. We do not sell personal data or use it for targeted
-          advertising. Because we do not receive or hold the data the app processes, requests about QuickBooks data
+          advertising. Because we do not hold the data the app processes (our sign-in service only passes connection tokens through), requests about QuickBooks data
           should go to whoever controls that QuickBooks company, or to Intuit. For anything we do hold, such as an email
           you sent us, contact us and we will respond within the time the law requires.</li>
       </ul>
 
       <h2 id="privacy-10"><span class="n">10.</span>Employee and customer data</h2>
-      <p>Time entries can include personal information about employees, contractors and customers, such as names, hours
+      <p>QuickBooks records, such as time entries, can include personal information about employees, contractors and customers, such as names, hours
         worked and work descriptions. If you use the app with that data, you are responsible for having a lawful basis to
         process it and for any notices your employees or customers are owed. The app processes it only on your computer
         and only as described in this policy.</p>
