@@ -163,9 +163,17 @@
     .doc-nav { margin-left: 0; }
   }
 
-  .landing { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); max-width: 760px; }
+  .landing { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); max-width: 760px; }
   .card { display: block; background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 20px 22px; text-decoration: none; color: var(--ink); }
   .card:hover { border-color: var(--accent); }
   .card h2 { font-family: var(--font-display); font-size: var(--step-1); margin: 0 0 6px; }
   .card p { margin: 0; color: var(--ink-soft); font-size: var(--step--1); }
   .page.single { grid-template-columns: minmax(0, 1fr); max-width: 860px; }
+.doc p.hint { color: var(--ink-soft); font-size: var(--step--1); margin: 0 0 16px; }
+.download-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin: 20px 0 8px !important; }
+.button { display: inline-block; background: var(--accent); color: var(--sheet); font-weight: 600; text-decoration: none; padding: 11px 20px; border-radius: 8px; }
+.button:hover { filter: brightness(1.08); }
+.hint-inline { color: var(--ink-soft); font-size: var(--step--1); max-width: 46ch; }
+.doc .landing { margin: 8px 0 12px; }
+.docs > * { min-width: 0; }
+.doc .card p { color: var(--ink-soft); }
