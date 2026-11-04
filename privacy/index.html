@@ -49,9 +49,22 @@
     <article class="doc" id="privacy" aria-labelledby="privacy-title">
       <p class="eyebrow">Legal</p>
       <h1 id="privacy-title">Privacy Policy</h1>
-      <p class="meta"><span><b>Effective:</b> November 1, 2026</span><span><b>Last updated:</b> November 1, 2026</span><span><b>Applies to:</b> BulkAuto for Windows and macOS</span></p>
+      <p class="meta"><span><b>Effective:</b> November 1, 2026</span><span><b>Last updated:</b> November 4, 2026</span><span><b>Applies to:</b> BulkAuto for Windows and macOS</span></p>
 
       <section class="summary" aria-label="What changed">
+        <h2>What changed on November 4, 2026</h2>
+        <ul>
+          <li>The app's button for connecting is now called Connect to QuickBooks, as Intuit asks, and the app is called
+            only BulkAuto.</li>
+          <li>The saved connection on your computer now keeps the QuickBooks company ID encrypted too (from version
+            1.38.0). See <a href="#privacy-6">section 6</a>.</li>
+          <li>Our sign-in service now keeps only a one-way fingerprint of each QuickBooks company ID it counts for trials
+            and subscriptions, never the ID itself. See <a href="#privacy-2">section 2</a>.</li>
+          <li>Disconnect beside a company kept in the app's company menu also ends its connection at Intuit (from version
+            1.38.0). See <a href="#privacy-5">section 5</a>.</li>
+        </ul>
+      </section>
+      <section class="summary" aria-label="Earlier changes">
         <h2>What changed on November 1, 2026</h2>
         <ul>
           <li>The policy is now provided by BulkAuto Ltd., a Colorado limited liability company, instead of Logan Noble.</li>
@@ -71,7 +84,7 @@
             QuickBooks data is sent, and you can turn it off. See <a href="#privacy-4">section 4</a>.</li>
           <li>The support file, which you create and send only if you choose: what it holds. See <a href="#privacy-2">section 2</a>.</li>
           <li>The data folder's name changed from QBO Time Tool to BulkAuto.</li>
-          <li>The app no longer takes your own Intuit app keys: every connection uses Sign in with Intuit. Keys an
+          <li>The app no longer takes your own Intuit app keys: every connection goes through our sign-in service. Keys an
             earlier version saved are removed from its settings the first time the new version opens.</li>
           <li>Trials and subscriptions: what the sign-in service keeps to count them (a random ID for your copy of the
             app, your license and the company ID numbers you connect). See <a href="#privacy-2">section 2</a>.</li>
@@ -79,14 +92,14 @@
             less from QuickBooks. See <a href="#privacy-2">section 2</a> and <a href="#privacy-5">section 5</a>.</li>
         </ul>
       </section>
-      <p class="hint">Earlier change (October 27, 2026): Sign in with Intuit and its sign-in service, Disconnect ending
+      <p class="hint">Earlier change (October 27, 2026): connecting through our sign-in service, Disconnect ending
         the connection at Intuit, and the Mac version.</p>
 
       <section class="summary" aria-label="Summary">
         <h2>In short</h2>
         <ul>
-          <li>BulkAuto runs on your computer. We don't operate servers that receive your QuickBooks data. When you use
-            Sign in with Intuit, a small sign-in service we operate briefly handles your connection tokens (see section 4);
+          <li>BulkAuto runs on your computer. We don't operate servers that receive your QuickBooks data. When you
+            connect to QuickBooks, a small sign-in service we operate briefly handles your connection tokens (see section 4);
             it never receives your QuickBooks data. Update checks send only the app's version.</li>
           <li>Your QuickBooks data goes only between your computer and Intuit, over encrypted connections.</li>
           <li>The app has no analytics, advertising or tracking, and we never sell or share your information.</li>
@@ -95,7 +108,7 @@
       </section>
 
       <h2 id="privacy-1"><span class="n">1.</span>Who this covers</h2>
-      <p>This policy explains how BulkAuto (formerly QBO Time Tool; the "app") handles information, and is provided by BulkAuto Ltd.,
+      <p>This policy explains how BulkAuto (the "app") handles information, and is provided by BulkAuto Ltd.,
         a Colorado limited liability company and the developer of the app ("we," "us," or "our"). It applies to the desktop app and to this web page. It does not
         cover Intuit's services. Intuit's handling of your data is described in the
         <a href="https://www.intuit.com/privacy/statement/" target="_blank" rel="noopener">Intuit Global Privacy Statement</a>.</p>
@@ -106,13 +119,13 @@
         <table>
           <thead><tr><th scope="col">Information</th><th scope="col">Examples</th><th scope="col">Source</th></tr></thead>
           <tbody>
-            <tr><td>Connection details</td><td>OAuth access and refresh tokens, QuickBooks company ID (realm ID)</td><td>Intuit, after you sign in and approve access (with Sign in with Intuit, passed to the app through our sign-in service)</td></tr>
+            <tr><td>Connection details</td><td>OAuth access and refresh tokens, QuickBooks company ID (realm ID)</td><td>Intuit, after you sign in and approve access (passed to the app through our sign-in service)</td></tr>
             <tr><td>QuickBooks records</td><td>Time entries; invoices, bills, journal entries, expenses, purchase orders, estimates, deposits and payments; customers, vendors, employees, products and services, and accounts</td><td>Your QuickBooks company, when you load, scan, change or upload records</td></tr>
             <tr><td>Files you choose</td><td>Spreadsheets (CSV) or backup files you upload, and lists you paste in (for example, copied from Excel)</td><td>Your computer</td></tr>
             <tr><td>Files you attach</td><td>Receipts, signed estimates, PDFs and other files you attach to transactions</td><td>Your computer</td></tr>
             <tr><td>Backups and logs</td><td>Copies of records before they are changed or deleted; results of each run, used for undo and the change log</td><td>Created by the app on your computer</td></tr>
             <tr><td>Saved work</td><td>Upload column mappings and names you matched by hand; the last health scan; change logs you export</td><td>Created by the app on your computer</td></tr>
-            <tr><td>Subscription records</td><td>Kept by our sign-in service: a random ID for your copy of the app, your license (plan, seats, paid-until date; the license key only as a one-way fingerprint), the QuickBooks company ID numbers (no names) connected and when each was last used, to count trials, seats and companies; and, from version 1.35.0, how many times each computer read QuickBooks this month (production and sandbox, as two numbers)</td><td>Sent by the app with each sign-in and renewal (from version 1.33.0)</td></tr>
+            <tr><td>Subscription records</td><td>Kept by our sign-in service: a random ID for your copy of the app, your license (plan, seats, paid-until date; the license key only as a one-way fingerprint), a one-way fingerprint of each QuickBooks company ID connected (not the ID itself, and no names) and when each was last used, to count trials, seats and companies; and, from version 1.35.0, how many times each computer read QuickBooks this month (production and sandbox, as two numbers)</td><td>Sent by the app with each sign-in and renewal (from version 1.33.0)</td></tr>
             <tr><td>Billing details</td><td>Kept by Stripe: your name, email, billing address and payment method. We receive only your email, Stripe's customer and subscription ID numbers, the plan, number of seats, status and paid-until date</td><td>Stripe, when you subscribe or change or cancel a subscription (from version 1.34.0)</td></tr>
             <tr><td>Saved company copy</td><td>A copy of the QuickBooks records you've loaded (lists and transactions), so loading them again reads only what changed; on by default, and can be turned off in Settings</td><td>Your QuickBooks company, when you load records</td></tr>
             <tr><td>Request log</td><td>Time, type and result of each QuickBooks request and Intuit's reference ID (intuit_tid), with no record contents; kept 3 months</td><td>Created by the app on your computer</td></tr>
@@ -134,7 +147,7 @@
         (<code>appcenter.intuit.com</code>), its token service (<code>oauth.platform.intuit.com</code>) and the QuickBooks
         Online API (<code>quickbooks.api.intuit.com</code>, or the sandbox equivalent). Inside your computer, the app's
         window talks to its own built-in service, which only accepts connections from that same computer.</p>
-      <p><b>Sign in with Intuit.</b> When you sign in this way, your browser goes through our sign-in service
+      <p><b>Connect to QuickBooks.</b> When you connect, your browser goes through our sign-in service
         (<code>bulkauto-broker.timetool.workers.dev</code>, or <code>qbo-time-tool-broker.timetool.workers.dev</code> in
         versions before 1.26.1) to Intuit's sign-in pages. After you approve access,
         Intuit sends a one-time sign-in code to the service. The service exchanges it for your connection tokens using our
@@ -177,8 +190,8 @@
         time they open.) You can open this folder from the app (File → Open data folder). The data
         stays there until you delete it:</p>
       <ul>
-        <li><b>Disconnect</b> in the app removes the saved connection tokens for the current company and ends the
-          connection at Intuit.</li>
+        <li><b>Disconnect</b> in the app, for the current company or beside a company kept in the company menu, removes
+          that company's saved connection and ends the connection at Intuit.</li>
         <li><b>Our sign-in service</b> keeps a sign-in for at most 10 minutes and the tokens from it for at most 5
           minutes, and keeps nothing once the app has collected them. Renewals and disconnects pass through without being
           stored.</li>
@@ -197,9 +210,9 @@
 
       <h2 id="privacy-6"><span class="n">6.</span>Security</h2>
       <p>All communication with Intuit uses encrypted HTTPS connections. Access tokens expire after about an hour and are
-        refreshed automatically. With Sign in with Intuit, our Intuit app's client secret is held in Cloudflare's encrypted
+        refreshed automatically. Our Intuit app's client secret is held in Cloudflare's encrypted
         secret store, and your computer never receives it. The sign-in link in your browser carries only a one-way
-        fingerprint of a secret the app keeps, so no one else can collect your sign-in. The saved QuickBooks connection is encrypted using your operating system's protection (Windows' data
+        fingerprint of a secret the app keeps, so no one else can collect your sign-in. The saved QuickBooks connection, including the QuickBooks company ID, is encrypted using your operating system's protection (Windows' data
         protection, or the Keychain on a Mac), so only your user account on that computer can read it, and access tokens
         are kept in memory only, never written to disk. Backups and logs are protected by your user account's file
         permissions. Protect them by using an account password, keeping your computer updated and using full-disk
