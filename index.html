@@ -3,41 +3,249 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>BulkAuto</title>
-<meta name="description" content="BulkAuto: bulk cleanup for QuickBooks Online. Download, plans, License Agreement and Privacy Policy.">
+<title>BulkAuto: bulk cleanup for QuickBooks Online</title>
+<meta name="description" content="BulkAuto is a Windows desktop app that cleans up QuickBooks Online in bulk: delete, void or edit many transactions at once, tidy lists, Undeposited Funds and unapplied payments, upload and export CSVs, and run a read-only Health scan. Every change is previewed, confirmed, backed up and can be undone.">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'><rect x='1' y='1' width='24' height='24' rx='6' fill='%231d4ed8'/><circle cx='13' cy='13' r='7' fill='none' stroke='white' stroke-width='1.8'/><path d='M13 13 V8.6 M13 13 L16.2 14.8' stroke='white' stroke-width='1.8' stroke-linecap='round' fill='none'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
   <div class="masthead-inner">
-    <a class="product" href="" style="color: inherit; text-decoration: none;"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+    <a class="product" href="./"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
         <rect x="1" y="1" width="24" height="24" rx="6" fill="var(--accent)"></rect>
         <circle cx="13" cy="13" r="7" fill="none" stroke="var(--sheet)" stroke-width="1.8"></circle>
         <path d="M13 13 V8.6 M13 13 L16.2 14.8" stroke="var(--sheet)" stroke-width="1.8" stroke-linecap="round" fill="none"></path>
       </svg> BulkAuto</a>
-    <nav class="doc-nav" aria-label="Documents"><a href="download/">Download</a><a href="eula/">License Agreement</a><a href="privacy/">Privacy Policy</a></nav>
+    <nav class="doc-nav" aria-label="Site">
+      <a href="#features">Features</a>
+      <a href="#getting-started">Guide</a>
+      <a href="#support">Support</a>
+      <a class="nav-cta" href="download/">Download</a>
+    </nav>
   </div>
 </header>
-<div class="page single">
-  <main class="docs">
-    <div>
-      <p class="eyebrow">BulkAuto</p>
-      <h1 style="font-family: var(--font-display); font-size: var(--step-3); margin: 0 0 8px;">BulkAuto</h1>
-      <p style="color: var(--ink-soft); margin: 0 0 24px; max-width: 60ch;">BulkAuto (formerly QBO Time Tool) is a Windows desktop app for cleaning up QuickBooks Online companies in bulk: deleting, uploading, changing and fixing records, each with an undo.</p>
-      <div class="landing">
-        <a class="card" href="download/"><h2>Download</h2><p>BulkAuto for Windows, free for 5 days; plans and prices.</p></a>
-        <a class="card" href="eula/"><h2>End-User License Agreement</h2><p>The terms for installing and using the app.</p></a>
-        <a class="card" href="privacy/"><h2>Privacy Policy</h2><p>What the app handles, where it goes and how to delete it.</p></a>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Windows desktop app for QuickBooks Online</p>
+        <h1 id="hero-title">Clean up QuickBooks Online in bulk, with an undo for every change</h1>
+        <p class="lead">BulkAuto deletes, voids or edits many transactions at once, cleans up lists, Undeposited Funds and
+          unapplied payments, uploads and exports CSV files, and runs a read-only Health scan with a PDF report. Every
+          change shows a preview, asks you to confirm, keeps a backup and can be undone.</p>
+        <div class="actions">
+          <a class="button" href="download/"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download for Windows</a>
+          <a class="button secondary" href="#how-it-connects">How it connects</a>
+        </div>
+        <ul class="facts">
+          <li>Windows 10 and 11</li>
+          <li>Sandbox companies free</li>
+          <li>5-day free trial</li>
+          <li>No analytics or tracking</li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="mock">
+          <div class="mock-bar"><span></span><span></span><span></span></div>
+          <div class="mock-body">
+            <div class="mock-title"></div>
+            <div class="mock-sub"></div>
+            <div class="mock-row"><i></i><b style="width: 78%"></b><em></em></div>
+            <div class="mock-row"><i></i><b style="width: 62%"></b><em></em></div>
+            <div class="mock-row off"><i></i><b style="width: 70%"></b><em></em></div>
+            <div class="mock-row"><i></i><b style="width: 54%"></b><em></em></div>
+            <div class="mock-foot"><span></span><span class="go"></span></div>
+          </div>
+        </div>
+        <ol class="flow">
+          <li>Preview</li>
+          <li>Confirm</li>
+          <li>Backup</li>
+          <li>Undo</li>
+        </ol>
       </div>
     </div>
-    <p class="footer">QuickBooks and Intuit are trademarks of Intuit Inc. BulkAuto is an independent product and is not
-      affiliated with or endorsed by Intuit Inc.</p>
-  </main>
-</div>
+  </section>
 
+  <section class="section alt" id="features" aria-labelledby="features-title">
+    <div class="wrap">
+      <p class="eyebrow">What it does</p>
+      <h2 id="features-title">The cleanup jobs QuickBooks Online does one record at a time</h2>
+      <p class="lead">BulkAuto is for bookkeepers and business owners tidying up a QuickBooks Online company. Pick a
+        screen, load the records, tick the ones to change, then review and confirm.</p>
+      <div class="grid">
+        <article class="feature">
+          <h3><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg>Delete or void in bulk</h3>
+          <p>Any kind of transaction over a date range: invoices, bills, payments, expenses, deposits, journal entries
+            and more. Void instead of deleting where QuickBooks allows it, and leave linked transactions alone unless
+            you choose.</p>
+        </article>
+        <article class="feature">
+          <h3><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16v4zM13 7l4 4"/></svg>Edit many at once</h3>
+          <p>Change memo, date, terms, class, location and reference number across many transactions. Reclassify
+            categories, edit unbilled time and mark unbilled charges billable or not.</p>
+        </article>
+        <article class="feature">
+          <h3><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>Clean up lists</h3>
+          <p>Find customers, vendors, items and accounts not used since a date and make them inactive. Spot likely
+            duplicate names and transactions, close old purchase orders and estimates, and pause or delete recurring
+            templates.</p>
+        </article>
+        <article class="feature">
+          <h3><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6M5 10v8M19 10v8M9 10v8M15 10v8M3 20h18"/></svg>Undeposited Funds and unapplied payments</h3>
+          <p>Match payments waiting in Undeposited Funds to bank deposits that already counted them, or group them
+            into one deposit. Apply leftover payments and credits to open invoices and bills, and write off small
+            balances.</p>
+        </article>
+        <article class="feature">
+          <h3><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6v18h12V7l-4-4zM14 3v4h4M9 13h6M9 17h6"/></svg>Upload and export CSVs</h3>
+          <p>Upload transactions, time and lists from a CSV, with column matching, name lookups and a row-by-row review
+            before anything is posted. Export any kind of transaction to a CSV in the same columns. Attach files to
+            transactions in bulk.</p>
+        </article>
+        <article class="feature">
+          <h3><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>Health scan and PDF report</h3>
+          <p>A read-only check that lists what a cleanup should look at, from uncategorized transactions to old
+            Undeposited Funds and likely duplicates. Each finding opens its fix. Save a client-ready PDF report.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how-it-connects" aria-labelledby="connect-title">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">Integration</p>
+        <h2 id="connect-title">How it works with QuickBooks Online</h2>
+        <p class="lead">BulkAuto runs on your Windows computer and works with QuickBooks Online through Intuit's
+          QuickBooks Online API, with the access you approve.</p>
+      </div>
+      <ol class="steps">
+        <li><b>Connect to QuickBooks.</b>
+          <p>Click Connect to QuickBooks in the app. Your browser opens Intuit's own sign-in page, where you choose the
+            company and approve access. BulkAuto never sees your Intuit password.</p></li>
+        <li><b>The app calls the QuickBooks Online API directly.</b>
+          <p>Records go straight between your computer and Intuit over encrypted connections. A small sign-in service
+            run by BulkAuto Ltd. handles only the sign-in and connection renewals, never your QuickBooks data.</p></li>
+        <li><b>Changes happen only when you confirm them.</b>
+          <p>Loading reads from QuickBooks. Writes happen only after you review a preview and confirm. The app keeps
+            within Intuit's request limits.</p></li>
+        <li><b>Disconnect any time.</b>
+          <p>Choose Disconnect in the app's company menu to end the connection at Intuit. You can also disconnect the
+            app in QuickBooks Online.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section alt" id="safety" aria-labelledby="safety-title">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">Safety</p>
+        <h2 id="safety-title">Built so a bulk change is never a leap of faith</h2>
+        <p class="lead">QuickBooks Online has no undo for deleted records. BulkAuto adds one.</p>
+      </div>
+      <ul class="checks">
+        <li><b>Preview first.</b> Every change shows what it will do before anything is written.</li>
+        <li><b>Confirm.</b> Nothing is written to QuickBooks until you confirm the run.</li>
+        <li><b>Backup.</b> A full copy of each record is saved on your computer before it's changed.</li>
+        <li><b>Undo from Activity.</b> Activity lists every change the app made to the company, each with its undo.
+          Export the change log as a CSV or PDF for a client or CPA.</li>
+        <li><b>Closing date respected.</b> Transactions dated on or before the company's closing date are skipped.</li>
+        <li><b>Fresh data.</b> Each record is read again just before it's changed. Anything changed in QuickBooks since
+          you loaded it is skipped and listed rather than overwritten.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="privacy" aria-labelledby="privacy-title">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">Privacy</p>
+        <h2 id="privacy-title">Your QuickBooks data stays with you</h2>
+      </div>
+      <div class="panel">
+        <ul>
+          <li>Your QuickBooks data goes only between your computer and Intuit.</li>
+          <li>Backups, history and settings stay in your user folder on your computer.</li>
+          <li>The saved QuickBooks connection is encrypted for your Windows account.</li>
+          <li>No analytics, advertising or tracking. Your information is never sold or shared.</li>
+        </ul>
+        <p><a href="privacy/">Read the Privacy Policy</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="getting-started" aria-labelledby="start-title">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">Guide</p>
+        <h2 id="start-title">Getting started</h2>
+        <p class="lead">From download to your first cleanup in a few minutes.</p>
+        <p class="muted">The app has its own Help (<kbd>F1</kbd>) with a guide for every screen.</p>
+      </div>
+      <ol class="steps">
+        <li><b>Download and install.</b>
+          <p>Get the installer from the <a href="download/">download page</a>, run it and accept the License
+            Agreement.</p></li>
+        <li><b>Connect to QuickBooks.</b>
+          <p>Open BulkAuto and click Connect to QuickBooks. Sign in on Intuit's page and approve access. To try it
+            first, use a sandbox (test) company: it's free.</p></li>
+        <li><b>Run the Health scan.</b>
+          <p>It estimates the reads, then lists what needs attention without changing anything. Save the PDF if you
+            want a report.</p></li>
+        <li><b>Fix one thing at a time.</b>
+          <p>Open a finding's fix, or pick a screen in the sidebar (<kbd>Ctrl</kbd>+<kbd>K</kbd> searches them). Tick
+            the records, review the preview and confirm.</p></li>
+        <li><b>Check Activity.</b>
+          <p>Every run is listed there with its undo.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="trial" aria-labelledby="trial-title">
+    <div class="wrap two-col">
+      <div class="panel">
+        <h3 id="trial-title">Free trial</h3>
+        <p>Sandbox (test) companies are always free. For a real (production) company, a 5-day free trial starts the
+          first time the app connects one. No payment details are needed for the trial.</p>
+        <p>Start a free trial from the app; choose a plan in Settings → Subscription.</p>
+      </div>
+      <div class="panel" id="requirements">
+        <h3>System requirements</h3>
+        <dl class="specs">
+          <dt>Windows</dt><dd>Windows 10 or Windows 11</dd>
+          <dt>QuickBooks</dt><dd>A QuickBooks Online company, and permission to connect apps to it</dd>
+          <dt>Internet</dt><dd>A connection to reach QuickBooks Online</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="support" aria-labelledby="support-title">
+    <div class="wrap">
+      <p class="eyebrow">Support</p>
+      <h2 id="support-title">Questions or problems?</h2>
+      <p class="lead">Email <a href="mailto:log.c.noble@gmail.com">log.c.noble@gmail.com</a>. In the app, Help →
+        Contact can save a support file to attach. It holds the request log and settings, never your QuickBooks data or
+        passwords.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="footer-links">
+      <li><a href="download/">Download</a></li>
+      <li><a href="eula/">License Agreement (EULA)</a></li>
+      <li><a href="privacy/">Privacy Policy</a></li>
+      <li><a href="mailto:log.c.noble@gmail.com">log.c.noble@gmail.com</a></li>
+    </ul>
+    <p>BulkAuto is made by BulkAuto Ltd., a Colorado limited liability company.</p>
+    <p>QuickBooks and Intuit are trademarks of Intuit Inc. BulkAuto is not affiliated with or endorsed by Intuit.</p>
+  </div>
+</footer>
 </body>
 </html>

@@ -4,47 +4,70 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>BulkAuto Disconnected</title>
-<meta name="description" content="BulkAuto has been disconnected from your QuickBooks Online company.">
+<meta name="description" content="The connection between BulkAuto and your QuickBooks Online company has ended. How to reconnect.">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'><rect x='1' y='1' width='24' height='24' rx='6' fill='%231d4ed8'/><circle cx='13' cy='13' r='7' fill='none' stroke='white' stroke-width='1.8'/><path d='M13 13 V8.6 M13 13 L16.2 14.8' stroke='white' stroke-width='1.8' stroke-linecap='round' fill='none'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
   <div class="masthead-inner">
-    <a class="product" href="../" style="color: inherit; text-decoration: none;"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+    <a class="product" href="../"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
         <rect x="1" y="1" width="24" height="24" rx="6" fill="var(--accent)"></rect>
         <circle cx="13" cy="13" r="7" fill="none" stroke="var(--sheet)" stroke-width="1.8"></circle>
         <path d="M13 13 V8.6 M13 13 L16.2 14.8" stroke="var(--sheet)" stroke-width="1.8" stroke-linecap="round" fill="none"></path>
       </svg> BulkAuto</a>
-    <nav class="doc-nav" aria-label="Documents"><a href="../eula/">License Agreement</a><a href="../privacy/">Privacy Policy</a></nav>
+    <nav class="doc-nav" aria-label="Site">
+      <a href="../#features">Features</a>
+      <a href="../#getting-started">Guide</a>
+      <a href="../#support">Support</a>
+      <a class="nav-cta" href="../download/">Download</a>
+    </nav>
   </div>
 </header>
+
 <div class="page single">
-  <main class="docs">
-    <article class="doc">
-      <p class="eyebrow">Disconnected</p>
-      <h1>BulkAuto is disconnected</h1>
-      <p>BulkAuto no longer has access to your QuickBooks Online company. It can't read or change any of the
-        company's data until someone connects it again.</p>
-      <h2>Remove the saved data from your computer</h2>
-      <p>Disconnecting in QuickBooks doesn't delete anything stored on your computer. To remove it:</p>
-      <ol>
-        <li>Close BulkAuto.</li>
-        <li>Press <b>Windows + R</b>, type <code>%APPDATA%\BulkAuto</code> and press Enter. (If you had the app before it
-          was renamed from QBO Time Tool, type <code>%APPDATA%\QBO Time Tool</code> instead.)</li>
-        <li>Delete <code>tokens.sandbox.json</code>, <code>tokens.production.json</code> and the <code>companies</code>
-          folder to remove the saved connections. Delete the whole folder to remove settings and backups too. Backups are
-          your only copy of records the app deleted or changed, so keep them if you might need them.</li>
+  <main class="docs" id="main">
+    <article class="doc" aria-labelledby="disc-title">
+      <p class="status">Disconnected</p>
+      <h1 id="disc-title">BulkAuto is disconnected from QuickBooks</h1>
+      <p class="lead">The connection between BulkAuto and your QuickBooks Online company has ended. BulkAuto can no
+        longer read or change that company's data until someone connects it again.</p>
+      <p>Backups and history on your computer are kept. Activity still lists the changes the app made, and they can be
+        undone after you reconnect.</p>
+
+      <h2>Reconnect</h2>
+      <ol class="steps">
+        <li><b>Open BulkAuto</b> from the Start menu or your desktop.</li>
+        <li><b>Click Connect to QuickBooks.</b>
+          <p>Or, if the app is working on another company, open the company menu at the top and choose <b>Connect
+            another company</b>.</p></li>
+        <li><b>Approve access on Intuit's sign-in page.</b>
+          <p>Choose the company and approve. The app connects by itself. You need to be an admin of the company, or
+            allowed to connect apps to it.</p></li>
       </ol>
-      <p>You can also uninstall the app from Windows <b>Settings → Apps</b>. To use the app again later, see
-        <a href="../connect/">Connect BulkAuto</a>.</p>
+
+      <h2>Removing BulkAuto completely</h2>
+      <p>To remove the app, uninstall it from Windows <b>Settings → Apps</b>. Uninstalling leaves the data folder, with
+        your backups and history, in place. The <a href="../privacy/">Privacy Policy</a> explains where it is and how to
+        delete it.</p>
+      <p>Questions? Email <a href="mailto:log.c.noble@gmail.com">log.c.noble@gmail.com</a>.</p>
     </article>
-    <p class="footer">QuickBooks and Intuit are trademarks of Intuit Inc. BulkAuto is an independent product and is not
-      affiliated with or endorsed by Intuit Inc.</p>
   </main>
 </div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="footer-links">
+      <li><a href="../download/">Download</a></li>
+      <li><a href="../eula/">License Agreement (EULA)</a></li>
+      <li><a href="../privacy/">Privacy Policy</a></li>
+      <li><a href="mailto:log.c.noble@gmail.com">log.c.noble@gmail.com</a></li>
+    </ul>
+    <p>BulkAuto is made by BulkAuto Ltd., a Colorado limited liability company.</p>
+    <p>QuickBooks and Intuit are trademarks of Intuit Inc. BulkAuto is not affiliated with or endorsed by Intuit.</p>
+  </div>
+</footer>
 </body>
 </html>

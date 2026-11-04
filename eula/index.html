@@ -4,22 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>BulkAuto End-User License Agreement</title>
-<meta name="description" content="End-User License Agreement for BulkAuto (formerly QBO Time Tool), a desktop app for cleaning up QuickBooks Online companies in bulk.">
+<meta name="description" content="End-User License Agreement for BulkAuto, a desktop app for cleaning up QuickBooks Online companies in bulk.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'><rect x='1' y='1' width='24' height='24' rx='6' fill='%231d4ed8'/><circle cx='13' cy='13' r='7' fill='none' stroke='white' stroke-width='1.8'/><path d='M13 13 V8.6 M13 13 L16.2 14.8' stroke='white' stroke-width='1.8' stroke-linecap='round' fill='none'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
   <div class="masthead-inner">
-    <a class="product" href="../" style="color: inherit; text-decoration: none;"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+    <a class="product" href="../"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
         <rect x="1" y="1" width="24" height="24" rx="6" fill="var(--accent)"></rect>
         <circle cx="13" cy="13" r="7" fill="none" stroke="var(--sheet)" stroke-width="1.8"></circle>
         <path d="M13 13 V8.6 M13 13 L16.2 14.8" stroke="var(--sheet)" stroke-width="1.8" stroke-linecap="round" fill="none"></path>
       </svg> BulkAuto</a>
-    <nav class="doc-nav" aria-label="Documents"><a href="../download/">Download</a><a href="../eula/" class="current" aria-current="page">License Agreement</a><a href="../privacy/">Privacy Policy</a></nav>
+    <nav class="doc-nav" aria-label="Site">
+      <a href="../#features">Features</a>
+      <a href="../#getting-started">Guide</a>
+      <a href="../#support">Support</a>
+      <a class="nav-cta" href="../download/">Download</a>
+    </nav>
   </div>
 </header>
 <div class="page">
@@ -44,7 +48,7 @@
       <li><a href="#eula-16">16. Contact</a></li>
     </ol>
   </div></aside>
-  <main class="docs">
+  <main class="docs" id="main">
     <article class="doc" id="eula" aria-labelledby="eula-title">
       <p class="eyebrow">Legal</p>
       <h1 id="eula-title">End-User License Agreement</h1>
@@ -229,10 +233,20 @@
         <button class="copy" type="button" data-copy="emailEula">Copy email</button>
       </div>
     </article>
-    <p class="footer">QuickBooks and Intuit are trademarks of Intuit Inc. BulkAuto is an independent product and is not
-      affiliated with or endorsed by Intuit Inc.</p>
   </main>
 </div>
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="footer-links">
+      <li><a href="../download/">Download</a></li>
+      <li><a href="../eula/" aria-current="page">License Agreement (EULA)</a></li>
+      <li><a href="../privacy/">Privacy Policy</a></li>
+      <li><a href="mailto:log.c.noble@gmail.com">log.c.noble@gmail.com</a></li>
+    </ul>
+    <p>BulkAuto is made by BulkAuto Ltd., a Colorado limited liability company.</p>
+    <p>QuickBooks and Intuit are trademarks of Intuit Inc. BulkAuto is not affiliated with or endorsed by Intuit.</p>
+  </div>
+</footer>
 <script>// Copy buttons: clipboard write inside the click, with a select-the-text fallback.
   document.querySelectorAll('[data-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {

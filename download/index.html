@@ -3,90 +3,95 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Download BulkAuto</title>
-<meta name="description" content="Download BulkAuto for Windows: bulk cleanup for QuickBooks Online, with a preview, a backup and an undo for every change. Free for 5 days.">
+<title>Download BulkAuto for Windows</title>
+<meta name="description" content="Download BulkAuto for Windows 10 and 11: bulk cleanup for QuickBooks Online, with a preview, a backup and an undo for every change.">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'><rect x='1' y='1' width='24' height='24' rx='6' fill='%231d4ed8'/><circle cx='13' cy='13' r='7' fill='none' stroke='white' stroke-width='1.8'/><path d='M13 13 V8.6 M13 13 L16.2 14.8' stroke='white' stroke-width='1.8' stroke-linecap='round' fill='none'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
   <div class="masthead-inner">
-    <a class="product" href="../" style="color: inherit; text-decoration: none;"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+    <a class="product" href="../"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
         <rect x="1" y="1" width="24" height="24" rx="6" fill="var(--accent)"></rect>
         <circle cx="13" cy="13" r="7" fill="none" stroke="var(--sheet)" stroke-width="1.8"></circle>
         <path d="M13 13 V8.6 M13 13 L16.2 14.8" stroke="var(--sheet)" stroke-width="1.8" stroke-linecap="round" fill="none"></path>
       </svg> BulkAuto</a>
-    <nav class="doc-nav" aria-label="Documents"><a href="../download/" class="current" aria-current="page">Download</a><a href="../eula/">License Agreement</a><a href="../privacy/">Privacy Policy</a></nav>
+    <nav class="doc-nav" aria-label="Site">
+      <a href="../#features">Features</a>
+      <a href="../#getting-started">Guide</a>
+      <a href="../#support">Support</a>
+      <a class="nav-cta current" href="./" aria-current="page">Download</a>
+    </nav>
   </div>
 </header>
+
 <div class="page single">
-  <main class="docs">
+  <main class="docs" id="main">
     <article class="doc" aria-labelledby="dl-title">
       <p class="eyebrow">Download</p>
       <h1 id="dl-title">BulkAuto for Windows</h1>
-      <p>BulkAuto cleans up QuickBooks Online companies in bulk: delete or void transactions, upload records from
-        spreadsheets, change fields, apply payments and credits, write off small balances, group deposits, make names
-        inactive and more. Every change shows what it will do first, asks you to confirm, saves a backup, and can be
-        undone from History.</p>
+      <p class="lead">Bulk cleanup for QuickBooks Online, with a preview, a backup and an undo for every change.</p>
 
-      <p class="download-row">
-        <a class="button" href="https://github.com/logcnoble-netizen/bulkauto-releases/releases/latest">Download BulkAuto</a>
-        <span class="hint-inline">Windows 10 or 11, 64-bit. Signed by its publisher, Logan Noble. It updates itself, and asks
-          before installing anything.</span>
-      </p>
-
-      <h2>Free for 5 days</h2>
-      <p>Each computer gets a free trial of five days from its first connection to a real QuickBooks company. No payment
-        details are needed, and nothing is charged unless you subscribe. Sandbox (test) companies are always free.</p>
-
-      <h2>Plans</h2>
-      <p>Per bookkeeper, each on up to two computers. Subscribe in the app, under Settings → Subscription; payment is handled
-        by Stripe.</p>
-      <div class="landing">
-        <div class="card"><h2>Standard</h2><p><b>$49.99 a month</b> or $490 a year, per bookkeeper. Up to 3 client
-          companies and 20,000 QuickBooks reads each a month.</p></div>
-        <div class="card"><h2>Firm</h2><p><b>$99.99 a month</b> or $990 a year, per bookkeeper. Unlimited client companies
-          and 60,000 QuickBooks reads each a month.</p></div>
+      <div class="actions">
+        <a class="button" href="https://github.com/logcnoble-netizen/bulkauto-releases/releases/latest"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download the latest version</a>
+        <span class="hint-inline">Windows 10 or 11. Opens the latest release on GitHub.</span>
       </div>
-      <p class="hint">Cancel any time in the app (Settings → Subscription → Manage billing); it keeps working to the end of
-        the period you've paid for. See the <a href="../eula/#eula-7">License Agreement</a> for the full terms.</p>
+      <p class="hint">On the release page, under <b>Assets</b>, download the file named
+        <code>BulkAuto-Setup-</code> followed by the version number and <code>.exe</code>. The installer is signed by
+        its publisher, Logan Noble.</p>
+
+      <h2>Install</h2>
+      <ol class="steps">
+        <li><b>Run the installer.</b>
+          <p>Open the <code>BulkAuto-Setup</code> file you downloaded. If Windows shows "Windows protected your PC",
+            click <b>More info</b>, then <b>Run anyway</b>. Windows can show this while a new publisher's signature
+            builds its reputation.</p></li>
+        <li><b>Accept the License Agreement.</b>
+          <p>The installer shows the <a href="../eula/">End-User License Agreement</a>. Accept it, choose where to
+            install, and finish. BulkAuto is added to the desktop and the Start menu.</p></li>
+        <li><b>Click Connect to QuickBooks.</b>
+          <p>Open BulkAuto and click <b>Connect to QuickBooks</b>. Your browser opens Intuit's sign-in page: choose
+            the company and approve access, and the app connects by itself.</p></li>
+      </ol>
+
+      <h2>Updates</h2>
+      <p>Updates install from inside the app. BulkAuto checks for a new version when it opens and about once a day,
+        sending only its version number. It asks before downloading, checks the update is signed by its publisher, and
+        installs it when the app restarts, never during a run. Settings → Updates turns the check off and has
+        <b>Check now</b>.</p>
+
+      <h2>Trial and plans</h2>
+      <p>Sandbox (test) companies are always free. For a real (production) company, a 5-day free trial starts the first
+        time the app connects one, with no payment details needed. Start a free trial from the app; choose a plan in
+        Settings → Subscription.</p>
 
       <h2>What you need</h2>
       <ul>
-        <li>A QuickBooks Online company you're allowed to change, and its Intuit sign-in. BulkAuto connects with Sign in
-          with Intuit and never sees your password.</li>
-        <li>Your QuickBooks data goes only between your computer and Intuit. See the <a href="../privacy/">Privacy Policy</a>.</li>
+        <li>Windows 10 or Windows 11.</li>
+        <li>A QuickBooks Online company, and permission to connect apps to it.</li>
+        <li>Your QuickBooks data goes only between your computer and Intuit. See the
+          <a href="../privacy/">Privacy Policy</a>.</li>
       </ul>
 
       <h2>Questions</h2>
-      <div class="contact">
-        <span class="email" id="emailDownload">log.c.noble@gmail.com</span>
-        <button class="copy" type="button" data-copy="emailDownload">Copy email</button>
-      </div>
+      <p>Email <a href="mailto:log.c.noble@gmail.com">log.c.noble@gmail.com</a>.</p>
     </article>
-    <p class="footer">QuickBooks and Intuit are trademarks of Intuit Inc. BulkAuto is an independent product and is not
-      affiliated with or endorsed by Intuit Inc. BulkAuto is made by BulkAuto Ltd., a Colorado limited liability company.</p>
   </main>
 </div>
 
-<script>// Copy buttons: clipboard write inside the click, with a select-the-text fallback.
-  document.querySelectorAll('[data-copy]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var el = document.getElementById(btn.getAttribute('data-copy'));
-      var text = el.textContent.trim();
-      var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy email'; }, 1600); };
-      var fallback = function () {
-        var r = document.createRange(); r.selectNodeContents(el);
-        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-        btn.textContent = 'Selected, press Ctrl+C';
-      };
-      try {
-        navigator.clipboard.writeText(text).then(done, fallback);
-      } catch (e) { fallback(); }
-    });
-  });</script>
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="footer-links">
+      <li><a href="./">Download</a></li>
+      <li><a href="../eula/">License Agreement (EULA)</a></li>
+      <li><a href="../privacy/">Privacy Policy</a></li>
+      <li><a href="mailto:log.c.noble@gmail.com">log.c.noble@gmail.com</a></li>
+    </ul>
+    <p>BulkAuto is made by BulkAuto Ltd., a Colorado limited liability company.</p>
+    <p>QuickBooks and Intuit are trademarks of Intuit Inc. BulkAuto is not affiliated with or endorsed by Intuit.</p>
+  </div>
+</footer>
 </body>
 </html>
