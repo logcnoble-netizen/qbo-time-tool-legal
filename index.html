@@ -44,18 +44,10 @@
         </ul>
       </div>
       <div class="hero-art" aria-hidden="true">
-        <div class="mock">
-          <div class="mock-bar"><span></span><span></span><span></span></div>
-          <div class="mock-body">
-            <div class="mock-title"></div>
-            <div class="mock-sub"></div>
-            <div class="mock-row"><i></i><b style="width: 78%"></b><em></em></div>
-            <div class="mock-row"><i></i><b style="width: 62%"></b><em></em></div>
-            <div class="mock-row off"><i></i><b style="width: 70%"></b><em></em></div>
-            <div class="mock-row"><i></i><b style="width: 54%"></b><em></em></div>
-            <div class="mock-foot"><span></span><span class="go"></span></div>
-          </div>
-        </div>
+        <figure class="demo-frame hero-demo">
+          <video class="demo" src="media/delete.mp4" poster="media/delete.jpg" width="1600" height="1000"
+            muted loop playsinline autoplay preload="metadata"></video>
+        </figure>
         <ol class="flow">
           <li>Preview</li>
           <li>Confirm</li>
@@ -108,6 +100,29 @@
             Undeposited Funds and likely duplicates. Each finding opens its fix. Save a client-ready PDF report.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="section" id="in-action" aria-labelledby="action-title">
+    <div class="wrap">
+      <p class="eyebrow">In action</p>
+      <h2 id="action-title">See BulkAuto at work</h2>
+      <p class="lead">Recordings of BulkAuto on a demo QuickBooks Online company. Waits for QuickBooks are sped up.</p>
+      <div class="demo-grid">
+        <figure class="demo-frame">
+          <video class="demo" src="media/undo.mp4" poster="media/undo.jpg" width="1600" height="1000"
+            muted loop playsinline autoplay preload="metadata"
+            aria-label="Opening Activity, choosing a delete run and undoing it: BulkAuto re-creates the three transactions."></video>
+          <figcaption><b>Undo any run.</b> Activity lists every change BulkAuto made. Undo puts it back, after you confirm.</figcaption>
+        </figure>
+        <figure class="demo-frame">
+          <video class="demo" src="media/health.mp4" poster="media/health.jpg" width="1600" height="1000"
+            muted loop playsinline autoplay preload="metadata"
+            aria-label="Running the Health scan: BulkAuto reads the books and lists what needs attention, with a button to fix each finding."></video>
+          <figcaption><b>Health scan.</b> A read-only check of the books, with the screen that fixes each finding and a PDF for your client.</figcaption>
+        </figure>
+      </div>
+      <p class="demo-note"><b>At the top:</b> deleting three estimates in one run, after a preview and a typed confirmation, with a backup saved first.</p>
     </div>
   </section>
 
@@ -230,6 +245,20 @@
     </div>
   </section>
 </main>
+<script>
+  // The demo clips play only while on screen, and not on their own for anyone who asks for less motion: they get the
+  // still picture and play controls instead.
+  (() => {
+    const clips = document.querySelectorAll('video.demo');
+    const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    for (const v of clips) if (still) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; }
+    if (still || !('IntersectionObserver' in window)) return;
+    const seen = new IntersectionObserver((entries) => {
+      for (const e of entries) e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause();
+    }, { threshold: 0.3 });
+    clips.forEach((v) => seen.observe(v));
+  })();
+</script>
 
 <footer class="site-footer">
   <div class="wrap">
