@@ -43,17 +43,24 @@
           <li>No analytics or tracking</li>
         </ul>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <figure class="demo-frame hero-demo">
-          <video class="demo" src="media/delete.mp4" poster="media/delete.jpg" width="1600" height="1000"
-            muted loop playsinline autoplay preload="metadata"></video>
+      <div class="hero-art demo-carousel" role="region" aria-roledescription="carousel" aria-label="BulkAuto in action">
+        <div class="demo-tabs" role="tablist" aria-label="Flows">
+          <button type="button" role="tab" id="tab-delete" aria-selected="true" tabindex="0" aria-controls="demo-stage"
+            data-clip="delete" data-title="Delete in bulk." data-text="Pick the kind of transaction, review the list, and confirm. A full copy of each is saved first.">Delete</button>
+          <button type="button" role="tab" id="tab-undo" aria-selected="false" tabindex="-1" aria-controls="demo-stage"
+            data-clip="undo" data-title="Undo a run." data-text="Activity lists every change BulkAuto made. Undo puts it back, after you confirm.">Undo</button>
+          <button type="button" role="tab" id="tab-health" aria-selected="false" tabindex="-1" aria-controls="demo-stage"
+            data-clip="health" data-title="Health scan." data-text="A read-only check of the books, with the screen that fixes each finding and a PDF for your client.">Health scan</button>
+          <button type="button" role="tab" id="tab-uf" aria-selected="false" tabindex="-1" aria-controls="demo-stage"
+            data-clip="uf" data-title="Undeposited Funds." data-text="Payments a bank deposit already counted are found, with the reason, and moved into that deposit.">Undeposited Funds</button>
+        </div>
+        <figure class="demo-frame" id="demo-stage" role="tabpanel" aria-labelledby="tab-delete">
+          <video class="demo" src="media/delete.mp4" poster="media/delete.jpg" width="1280" height="800"
+            muted playsinline autoplay preload="auto"
+            aria-label="BulkAuto at work on a demo QuickBooks Online company. Waits for QuickBooks are sped up."></video>
+          <div class="demo-progress" aria-hidden="true"><span></span></div>
+          <figcaption id="demo-caption"><b>Delete in bulk.</b> Pick the kind of transaction, review the list, and confirm. A full copy of each is saved first.</figcaption>
         </figure>
-        <ol class="flow">
-          <li>Preview</li>
-          <li>Confirm</li>
-          <li>Backup</li>
-          <li>Undo</li>
-        </ol>
       </div>
     </div>
   </section>
@@ -100,29 +107,6 @@
             Undeposited Funds and likely duplicates. Each finding opens its fix. Save a client-ready PDF report.</p>
         </article>
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="in-action" aria-labelledby="action-title">
-    <div class="wrap">
-      <p class="eyebrow">In action</p>
-      <h2 id="action-title">See BulkAuto at work</h2>
-      <p class="lead">Recordings of BulkAuto on a demo QuickBooks Online company. Waits for QuickBooks are sped up.</p>
-      <div class="demo-grid">
-        <figure class="demo-frame">
-          <video class="demo" src="media/undo.mp4" poster="media/undo.jpg" width="1600" height="1000"
-            muted loop playsinline autoplay preload="metadata"
-            aria-label="Opening Activity, choosing a delete run and undoing it: BulkAuto re-creates the three transactions."></video>
-          <figcaption><b>Undo any run.</b> Activity lists every change BulkAuto made. Undo puts it back, after you confirm.</figcaption>
-        </figure>
-        <figure class="demo-frame">
-          <video class="demo" src="media/health.mp4" poster="media/health.jpg" width="1600" height="1000"
-            muted loop playsinline autoplay preload="metadata"
-            aria-label="Running the Health scan: BulkAuto reads the books and lists what needs attention, with a button to fix each finding."></video>
-          <figcaption><b>Health scan.</b> A read-only check of the books, with the screen that fixes each finding and a PDF for your client.</figcaption>
-        </figure>
-      </div>
-      <p class="demo-note"><b>At the top:</b> deleting three estimates in one run, after a preview and a typed confirmation, with a backup saved first.</p>
     </div>
   </section>
 
@@ -246,17 +230,46 @@
   </section>
 </main>
 <script>
-  // The demo clips play only while on screen, and not on their own for anyone who asks for less motion: they get the
-  // still picture and play controls instead.
+  // The demo carousel: each flow plays once, then the next; a tab picks a flow (which then loops) and stops the
+  // advancing. It pauses off screen. Anyone who asks for less motion gets the still picture and play controls instead.
   (() => {
-    const clips = document.querySelectorAll('video.demo');
+    const tabs = [...document.querySelectorAll('.demo-tabs [role=tab]')];
+    const stage = document.getElementById('demo-stage');
+    const video = stage.querySelector('video');
+    const caption = document.getElementById('demo-caption');
+    const bar = stage.querySelector('.demo-progress span');
     const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    for (const v of clips) if (still) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; }
-    if (still || !('IntersectionObserver' in window)) return;
-    const seen = new IntersectionObserver((entries) => {
-      for (const e of entries) e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause();
-    }, { threshold: 0.3 });
-    clips.forEach((v) => seen.observe(v));
+    let current = 0;
+    let advancing = !still;
+    let onScreen = true;
+    function show(k, play) {
+      current = k;
+      tabs.forEach((t, j) => { t.setAttribute('aria-selected', String(j === k)); t.tabIndex = j === k ? 0 : -1; });
+      const t = tabs[k];
+      stage.setAttribute('aria-labelledby', t.id);
+      video.poster = 'media/' + t.dataset.clip + '.jpg';
+      video.src = 'media/' + t.dataset.clip + '.mp4';
+      const b = document.createElement('b');
+      b.textContent = t.dataset.title;
+      caption.replaceChildren(b, ' ' + t.dataset.text);
+      bar.style.transform = 'scaleX(0)';
+      if (play && onScreen) video.play().catch(() => {});
+    }
+    tabs.forEach((t, k) => t.addEventListener('click', () => { advancing = false; video.loop = !still; show(k, !still); }));
+    document.querySelector('.demo-tabs').addEventListener('keydown', (e) => {
+      const step = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!step) return;
+      e.preventDefault();
+      const k = (current + step + tabs.length) % tabs.length;
+      tabs[k].focus();
+      tabs[k].click();
+    });
+    video.addEventListener('ended', () => { if (advancing) show((current + 1) % tabs.length, true); });
+    video.addEventListener('timeupdate', () => { bar.style.transform = 'scaleX(' + (video.duration ? video.currentTime / video.duration : 0) + ')'; });
+    if (still) { video.removeAttribute('autoplay'); video.pause(); video.controls = true; stage.classList.add('still'); return; }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([e]) => { onScreen = e.isIntersecting; onScreen ? video.play().catch(() => {}) : video.pause(); }, { threshold: 0.3 }).observe(video);
+    }
   })();
 </script>
 
