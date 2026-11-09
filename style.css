@@ -20,7 +20,7 @@
   --step-2: 1.5rem;
   --step-3: clamp(1.75rem, 1.2rem + 2.2vw, 2.25rem);
   --step-4: clamp(2rem, 1.3rem + 3.2vw, 3rem);
-  --wrap: 1120px;
+  --wrap: 1280px;
   --gutter: max(16px, env(safe-area-inset-left, 0px));
   --gutter-r: max(16px, env(safe-area-inset-right, 0px));
   color-scheme: light;
@@ -142,6 +142,9 @@ kbd { font-family: var(--font-mono); font-size: 0.85em; border: 1px solid var(--
 
 .hero { padding: 56px 0 48px; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 48px; align-items: center; }
+/* The hero is wider than the page and gives most of it to the demo carousel, so the clips are easy to follow. */
+.hero .wrap.hero-grid { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 40px; }
+.hero-grid h1 { font-size: clamp(2rem, 1.1rem + 1.5vw, 2.75rem); }
 .hero h1 { font-size: var(--step-4); margin: 0 0 16px; letter-spacing: -0.01em; }
 .hero .lead { font-size: var(--step-1); color: var(--ink-soft); max-width: 56ch; margin: 0; }
 .hero .facts { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--ink-soft); font-size: var(--step--1); }
@@ -291,9 +294,11 @@ th { font-weight: 700; color: var(--ink-soft); font-size: 0.75rem; text-transfor
 .footer { color: var(--ink-soft); font-size: var(--step--1); max-width: 68ch; }
 
 /* ----- Narrow screens ----- */
+@media (max-width: 1100px) {
+  .hero .wrap.hero-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; max-width: 920px; }
+}
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  .hero-art { max-width: 460px; }
   .two-col { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .page { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-top: 20px; padding-bottom: 48px; }
   .rail { position: static; grid-template-columns: 1fr 1fr; }
