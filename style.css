@@ -356,3 +356,14 @@ th { font-weight: 700; color: var(--ink-soft); font-size: 0.75rem; text-transfor
 .faq details > p, .faq details > ol { color: var(--ink-soft); margin: 12px 0; }
 .faq details > ol { padding-left: 22px; display: grid; gap: 6px; }
 
+
+/* FAQ page: the community board box, and room between the question groups */
+.community-card { background: var(--accent-soft); border: 1px solid var(--rule); border-radius: 14px; padding: 20px 22px; margin: 12px 0 40px; }
+.community-card h2 { margin-top: 0; }
+.community-card .actions { margin: 14px 0 12px; flex-wrap: wrap; }
+.doc .faq { margin-bottom: 12px; }
+/* Six menu links on a phone: a little tighter, so Download stays on the first line */
+@media (max-width: 420px) {
+  .doc-nav a { padding: 6px 5px; font-size: 13px; }
+  .doc-nav a.nav-cta { margin-left: 2px; padding: 6px 10px; }
+}
